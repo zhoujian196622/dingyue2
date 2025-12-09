@@ -1,7 +1,7 @@
 
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
-let mytoken = 'auto';
+let mytoken = 'root';
 let guestToken = ''; //可以随便取，或者uuid生成，https://1024tools.com/uuid
 let BotToken = ''; //可以为空，或者@BotFather中输入/start，/newbot，并关注机器人
 let ChatID = ''; //可以为空，或者@userinfobot中获取，/start
@@ -13,18 +13,13 @@ let timestamp = 4102329600000;//2099-12-31
 
 //节点链接 + 订阅链接
 let MainData = `
-https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
-https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
-https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/airport_sub_merge.txt
-https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge.txt
-https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub
+vless://34f1b283-0e09-4adb-8be2-93e54c14e07e@xui.dodobag.top:80?encryption=none&security=none&type=ws&path=%2F#US
+vless://34f1b283-0e09-4adb-8be2-93e54c14e07e@xui.dodobag.top:80?encryption=none&security=none&type=ws&path=%2F#HK
 `
 
 let urls = [];
 let subConverter = "SUBAPI.cmliussss.net"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
-let subConfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"; //订阅配置文件
+let subConfig = "https://raw.githubusercontent.com/zhoujian196622/GUIZE/refs/heads/main/%E5%B8%B8%E8%A7%84%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2%E6%A8%A1%E6%9D%BF.ini"; //订阅配置文件
 let subProtocol = 'https';
 
 export default {
@@ -827,4 +822,5 @@ async function KV(request, env, txt = 'ADD.txt', guest) {
 			headers: { "Content-Type": "text/plain;charset=utf-8" }
 		});
 	}
+
 }
